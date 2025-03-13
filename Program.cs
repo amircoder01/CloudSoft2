@@ -1,9 +1,11 @@
+using CloudSoft2.Repositories;
 using CloudSoft2.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddSingleton<ISubscriberRepository, InMemorySubscriberRepository>();
 builder.Services.AddScoped<INewsletterService, NewsletterService>();
 
 var app = builder.Build();
