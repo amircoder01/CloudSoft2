@@ -46,7 +46,7 @@ jobs:
 
     - name: Stop the application service
       run: |
-        sudo systemctl stop CloudSoft.service        
+        sudo systemctl stop CloudSoft2.service        
 
     - name: Deploy the the application
       run: |
