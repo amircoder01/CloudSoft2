@@ -10,6 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 // Check if MongoDB should be used (default to false if not specified)
 bool useMongoDb = builder.Configuration.GetValue<bool>("FeatureFlags:UseMongoDb");
+Console.WriteLine($"🔍 Feature Flag - UseMongoDb: {useMongoDb}");
+
 
 if (useMongoDb)
 {
