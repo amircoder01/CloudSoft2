@@ -50,9 +50,9 @@ jobs:
 
     - name: Deploy the the application
       run: |
-        sudo rm -Rf /opt/CloudSoft || true
-        sudo cp -r /home/azureuser/actions-runner/_work/CloudSoft/CloudSoft/ /opt/CloudSoft        
+        sudo rm -Rf /opt/CloudSoft2 || true
+        sudo cp -r /home/azureuser/actions-runner/_work/CloudSoft2/CloudSoft2/ /opt/CloudSoft2        
 
     - name: Start the application service
       run: |
-        sudo systemctl start CloudSoft.service        
+        sudo systemctl start CloudSoft2.service        

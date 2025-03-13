@@ -12,18 +12,18 @@ runcmd:
 
 # Create a service for the application
 write_files:
-  - path: /etc/systemd/system/CloudSoft.service
+  - path: /etc/systemd/system/CloudSoft2.service
     content: |
       [Unit]
       Description=ASP.NET Web App running on Ubuntu
 
       [Service]
-      WorkingDirectory=/opt/CloudSoft
-      ExecStart=/usr/bin/dotnet /opt/CloudSoft/CloudSoft.dll
+      WorkingDirectory=/opt/CloudSoft2
+      ExecStart=/usr/bin/dotnet /opt/CloudSoft2/CloudSoft2.dll
       Restart=always
       RestartSec=10
       KillSignal=SIGINT
-      SyslogIdentifier=CloudSoft
+      SyslogIdentifier=CloudSoft2
       User=www-data
       ASPNETCORE_ENVIRONMENT=Production
       Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
@@ -36,5 +36,5 @@ write_files:
 
 systemd:
   units:
-    - name: CloudSoft.service
+    - name: CloudSoft2.service
       enabled: true
